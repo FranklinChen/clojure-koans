@@ -18,12 +18,12 @@
 
   "One function can beget another"
   (= 9 ((fn []
-            ((fn [a b] (+ a b))
-              4 5))))
+           ((fn [a b] (+ a b))
+            4 5))))
 
   "Higher-order functions take function arguments"
   (= 25 (#(%1 5)
-          (fn [n] (* n n))))
+         (fn [n] (* n n))))
 
   "But they are often better written using the names of functions"
   (= 25 (#(%1 5) square)))
