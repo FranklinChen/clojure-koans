@@ -30,7 +30,7 @@
   (let [x 5]
     (= :your-road (cond (= x 1) :road-not-taken
                         (= x 2) :another-road-not-taken
-                        :else :your-road)))
+                        :else :your_road)))
 
   "Or your fate may be sealed"
   (= 'doom (if-not (zero? 555)
