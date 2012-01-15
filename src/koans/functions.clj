@@ -18,7 +18,7 @@
 
   "One function can beget another"
   (= 9 ((fn []
-           ((fn [a b] (__ a b))
+           ((fn [a b] (+ a b))
             4 5))))
 
   "Higher-order functions take function arguments"
