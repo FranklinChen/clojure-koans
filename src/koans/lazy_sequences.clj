@@ -1,5 +1,5 @@
 (meditations
-  "There are a wide range of ways to generate a sequence"
+  "There is a wide range of ways to generate a sequence"
   (= [1 2 3 4] (range 1 5))
 
   "The range starts at the beginning by default"
