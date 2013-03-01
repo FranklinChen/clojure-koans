@@ -15,24 +15,25 @@ Koans").
 
 If you're starting from a cloned or forked repo, that's cool too. This way
 you'll be able to track your progress in Git, and see how your answers compare
-to others, by checking out the project's Network tab. You might want to create your
-own branch - that way if you pull back the latest koans from master, it'll be a bit
-easier to manage the inevitable conflicts if we make changes to exercises you've already
-completed.
+to others, by checking out the project's Network tab. You might want to create
+your own branch - that way if you pull back the latest koans from master, it'll
+be a bit easier to manage the inevitable conflicts if we make changes to
+exercises you've already completed.
 
 The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
 - [clojure-1.3.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.3.0/clojure-1.3.0.zip)
 
-clojure-1.3.0.jar needs to be in a directory `lib` under this project.
-
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
 get you a couple more jarfiles, including JLine, which allows you some of the
 functionality of readline (command-line history, for example).
 
-After you have leiningen installed, run
+### Installing dependencies
+
+Dependencies are installed automatically with lein 2, but if you are still
+using lein 1 run
 
 `lein deps`
 
@@ -41,27 +42,33 @@ which will download all dependencies you need to run the Clojure koans.
 
 ### Running the Koans
 
-To run the koans, simply run
+If you're running from the zipfile or using lein 1, simply run
 
 `script/run` on Mac/\*nix
 
 `script\run` on Windows
 
+If you're running from a checkout using lein 2, run the koans via
+
+`lein koan run`
+
 It's an auto-runner, so as you save your files with the correct answers, it will
-advance you to the next koan or file.
+advance you to the next koan or file (conveniently, all files are prefixed with
+the sequence that you should follow).
 
 You'll see something like this:
 
-    Problem in  /home/colin/Projects/clojure-koans/src/koans/equalities.clj
+    Now meditate on /home/colin/Projects/clojure-koans/src/koans/01_equalities.clj:3
     ---------------------
     Assertion failed!
     We shall contemplate truth by testing reality, via equality.
     (= __ true)
 
-The output is telling you that you have a failing test in equalities.clj.
-So open that file up and make it pass!  In general, you just fill in the
-blanks to make tests pass.  Sometimes there are several (or even an infinite
-number) of correct answers: any of them will work in these cases.
+The output is telling you that you have a failing test in the file named
+`01_equalities.clj`, on line 3. So you just need to open that file up and make
+it pass!  You'll always be filling in the blanks to make tests pass.
+Sometimes there could be several correct answers (or even an infinite number):
+any of them will work in these cases.
 
 The koans differ from normal TDD in that the tests are already written for you,
 so you'll have to pay close attention to the failure messages, because up until
@@ -81,6 +88,8 @@ run:
 `script/repl` on Mac/\*nix
 
 `script\repl` on Windows
+
+If you're on lein 2, `lein repl` is what you want instead.
 
 Here are some interesting commands you might try, once you're in a running REPL:
 
@@ -104,8 +113,9 @@ You can exit the REPL with `CTRL-d` on any OS.
 
 ### Contributing
 
-Patches are encouraged!  Make sure the answer sheet still passes (`script/test`,
-or `script\test` on Windows), and send a pull request.
+Patches are encouraged!  Make sure the answer sheet still passes
+(`script/test`, or `script\test` on Windows, or `lein koan test` on lein2), and
+send a pull request.
 
 The file ideaboard.txt has lots of good ideas for new koans to start, or things
 to add to existing koans.  So write some fun exercises, add your answers to
@@ -115,21 +125,9 @@ Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
 have any questions or want more direction before you start pitching in.
 
 
-### Contributors (in order of appearance)
+### Contributors
 
-- Aaron Bedra
-- Colin Jones (maintainer)
-- Eric Lavigne
-- Nuno Marquez
-- Micah Martin
-- Michael Kohl
-- Ben Lickly
-- Alex Robbins
-- Jaskirat Singh Veen
-- Mark Simpson
-- Mike Jansen
-- Caleb Phillips
-- Doug South
+https://github.com/functional-koans/clojure-koans/contributors
 
 
 ### Credits
