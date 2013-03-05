@@ -8,15 +8,26 @@
   "You can test equality of many things"
   (= (+ 3 4) 7 (+ 2 5))
 
-  ; CHEN not sure what was intended, so I put in 4/2
   "Some things may appear different, but be the same"
-  (= 2 2/1 4/2)
+  (= true (= 2 2/1))
 
   "You cannot generally float to heavens of integers"
   (= false (= 2 2.0))
 
   "But a looser equality is also possible"
-  (== 2.0 2 2/1)
+  (= true (== 2.0 2))
+
+  "Something is not equal to nothing"
+  (= true (not (= 1 nil)))
+
+  "Strings, and keywords, and symbols: oh my!"
+  (= false (= "foo" :foo 'foo))
+
+  "Make a keyword with your keyboard"
+  (= :foo (keyword "foo"))
+
+  "Symbolism is all around us"
+  (= 'foo (symbol "foo"))
 
   "When things cannot be equal, they must be different"
   (not= :fill-in-the-blank 2))

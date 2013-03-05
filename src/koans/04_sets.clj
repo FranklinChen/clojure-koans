@@ -1,11 +1,11 @@
 (meditations
-  "You can create a set in two ways"
-  (= #{} (set nil))
+  "You can create a set by converting another collection"
+  (= #{3} (set '(3)))
 
-  "They are another important data structure in clojure"
+  "Counting them is like counting other collections"
   (= 3 (count #{1 2 3}))
 
-  "Remember that a set is a 'set'"
+  "Remember that a set is a *mathematical* set"
   (= #{1 2 3 4 5} (set '(1 1 2 2 3 3 4 4 5 5)))
 
   "You can ask clojure for the union of two sets"

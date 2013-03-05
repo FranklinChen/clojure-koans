@@ -1,44 +1,47 @@
 [["01_equalities" {"__" [true
                       2
-                      7
                       5
-                      4/2
+                      true
                       false
-                      6/3
+                      true
+                      true
+                      false
+                      "foo"
+                      "foo"
                       3]}]
 
  ["02_lists" {"__" [1 2 3 4 5
                  1
                  [2 3 4 5]
+                 3
+                 0
                  ()
                  [:a :b :c :d :e]
-                 [0 :a :b :c :d :e]
+                 [:e :a :b :c :d]
                  :a
                  [:b :c :d :e]
                  "No dice!"
                  ()]}]
 
  ["03_vectors" {"__" [1
-                   []
                    [1]
-                   [nil]
+                   [nil nil]
                    2
-                   [333]
+                   [111 222 333]
                    :peanut
                    :jelly
                    :jelly
                    [:butter :and]
                    3]}]
 
- ["04_sets" {"__" [nil
+ ["04_sets" {"__" [[3]
                 3
                 #{1 2 3 4 5}
                 #{1 2 3 4 5}
                 #{2 3}
                 #{1 4}]}]
 
- ["05_maps" {"__" [{}
-                0
+ ["05_maps" {"__" [:b 2
                 1
                 2
                 2
@@ -54,12 +57,14 @@
                 2006 2010 2014
                 "Vancouver"]}]
 
- ["06_functions" {"__" [20
-                     10 5
-                     30 2
-                     15
-                     20 *]
-               "___" [(fn [f] (f 5))
+ ["06_functions" {"__" [81
+                     20
+                     10
+                     60
+                     15]
+               "___" [+
+                      *
+                      (fn [f] (f 5))
                       (fn [f] (f 5))]}]
 
  ["07_conditionals" {"__" [:a
